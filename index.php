@@ -13,7 +13,24 @@
 (проверка деления на ноль)
 </p>
 
+<form action="/index.php" method "post">
+<input type="text" name="Введичи число №1" />
+<select name="form_select">
+    <option value="Сложение">+</option>
+    <option value="Вычитание">-</option>
+    <option value="Умножение">*</option>
+    <option value="Деление">/</option>
+  </select>
+<input type="text" name="Введичи число №2" />
+<input type="submit" value="Ответ" />
+<br>
+<input type="reset" name="Очистить" />
+
+
+</form>
 <?php
+
+
 
 ?> 
 
