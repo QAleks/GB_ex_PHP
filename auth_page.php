@@ -1,3 +1,4 @@
+<?php include 'functions.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,7 @@
 Введите пароль:<br>
 <input type="text" name="password">
 <input type="submit" name="enter" value="Вход">
-
-
+</form>
 <?php if (!empty($_POST['login'])){
 $login=$_POST['login'];
 }
@@ -22,6 +22,8 @@ if (!empty($_POST['password'])){
 }
 //var_dump($password);
 //var_dump($login);
+check_auth_user($login, $password);
+
 ?>
 
 
