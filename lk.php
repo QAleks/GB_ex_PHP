@@ -10,7 +10,7 @@ logout();
 </head>
 <body>
 <h1> Добро пожаловать </h1>
-<p>Вы авторизовались, <?php echo $login?></p>
+<p>Вы авторизовались, <?php echo $_COOKIE['login']?></p>
 
 <form action="lk.php" method="post">
 <button type="submit" name="exit">Выход</button>
