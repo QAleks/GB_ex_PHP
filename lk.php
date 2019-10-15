@@ -1,4 +1,6 @@
-<?php include 'functions.php'; ?>
+<?php include 'functions.php';
+logout();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +15,6 @@
 <form action="lk.php" method="post">
 <button type="submit" name="exit">Выход</button>
 </form>
-<?php
-logout();
-?>
 
 </body>
 
