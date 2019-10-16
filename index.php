@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +13,16 @@
 и возвращаться на страницу галереи. 
 </p>
 <?php
+//echo is_dir(__DIR__ . '\Test');
+$path=__DIR__ . '\Test';
 
+if(file_exists($path)){
+	$files_in_dir=scandir($path);
+	echo '<pre>';
+	print_r($files_in_dir);
+	echo '<pre>';
+	//echo 'есть';
+}
 
 ?>
 </table>
