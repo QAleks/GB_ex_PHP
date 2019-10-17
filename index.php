@@ -13,8 +13,22 @@
 сохраняться в БД и выводиться в галерее.
 </p>
 
+<form method="post" action="index.php">
+
+<fieldset>
+
+<input type="file"  name="upload_file" enctype="multipart/form-data">
+<p><input type="text" name="file_name"></p>
+</fieldset>
+<input type="submit" name="upload_form"> <p><a href="view.php">Перейти на страницу вывода файлов</a></p>
+
+</form>
+
 
 <?php
+
+
+
 
 
 ?>
