@@ -21,8 +21,6 @@
 </form>
 
 <?php
-$path=__DIR__ . '\Test';
-//echo is_dir(__DIR__ . '\Test');
 
 
 //echo '<pre>';
@@ -38,26 +36,35 @@ if(!empty($_FILES['add_picture']['name'])){
 }
 	
 }
-
-?>
-
-<?php
-
-
+$path=__DIR__ . '\Test';
 if(file_exists($path)){
-	$files_in_dir=array_diff(scandir($path), $a=['.','..']);
-	$files_in_dir=array_values($files_in_dir);
+$files_in_dir=array_diff(scandir($path), $a=['.','..']);
+$files_in_dir=array_values($files_in_dir);
+}
+
+
+//echo is_dir(__DIR__ . '\Test');
+//var_dump($_POST['view_picture']);
+if(!empty($_POST['view_picture'])){
+	foreach($files_in_dir as $key=>$value){
+			//echo ($key+1) . ') ';
+			echo '<img width = "200" height="200" src="./Test/' . $value . '">';
+		    //echo '<br>---------------------------------------------------------------------<br>';
+	}
+	
+}
+
+
 	echo '<p> <u>Список файлов в папке Test:</u> </p>' ;
 	foreach($files_in_dir as $key=>$value){
 			echo ($key+1) . ') ' . $value;
-		    echo '<br>---------------------------------------------------------------------<br>';
+			//echo '<img width = "200" height="200" src="./Test/' . $value . '">';
+			echo '<br>---------------------------------------------------------------------<br>';
 	}
-
-}
 
 ?>
 
-
+<!--<img src="./Test/4bf5837a7faf.jpg">-->
 </body>
 
 </html>
