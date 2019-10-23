@@ -1,3 +1,6 @@
+<?php
+include 'functions.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,22 +16,33 @@
 сохраняться в БД и выводиться в галерее.
 </p>
 
-<form method="post" action="index.php">
+<form method="post" action="index.php" enctype="multipart/form-data">
 
 <fieldset>
 
-<input type="file"  name="upload_file" enctype="multipart/form-data">
+<input type="file"  name="upload_file" >
 <p><input type="text" name="file_name"></p>
 </fieldset>
-<input type="submit" name="upload_form"> <p><a href="view.php">Перейти на страницу вывода файлов</a></p>
+
+<input type="submit" name="upload_form">
+
+<p><a href="view.php">Перейти на страницу вывода файлов</a></p>
 
 </form>
 
 
 <?php
+echo '<pre>';
+//print_r($link);
+//print_r($_SERVER);
+//var_dump($_FILES);
+echo '</pre>';
 
 
-
+if (!empty($_FILES['upload_file']['tmp_name'])){
+    //echo "Зашли в условие";
+    upload();
+}
 
 
 ?>
