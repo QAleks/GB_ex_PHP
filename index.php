@@ -44,7 +44,7 @@ if (!empty($_FILES['upload_file']['tmp_name'])){
     upload();
 }
 
-
+add_sql($link);
 ?>
 
 </body>
