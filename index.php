@@ -1,5 +1,6 @@
 <?php
-include 'functions.php';
+require_once 'functions.php';
+require_once 'connect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,12 +40,9 @@ echo '<pre>';
 echo '</pre>';
 
 
-if (!empty($_FILES['upload_file']['tmp_name'])){
-    //echo "Зашли в условие";
-    upload();
-}
+upload($link); //Функция загрузки выбранного файла в форме на сайте в папку "upload" на сервере
 
-add_sql($link);
+
 ?>
 
 </body>
